@@ -10,15 +10,16 @@
 <body>
     <div>
         <div>
-         <label>Hours:</label>
+         <label>N:</label>
          <input class="input-t" type="number" id="numberN">   
         </div>
         <div>
-         <label >Minutes:</label>
+         <label >M:</label>
          <input class="input-t" type="number" id="numberM">       
         
         </div>
-        <input type="button" onclick="result()" value='click'></input>
+        <input type="button" onclick="add()" value='Sum'></input>
+        <input type="button" onclick="subtract()" value='Sum'></input>
         <div>
             <label>Result:</label>
             <input class="input-t" type="text" id="result">
@@ -29,11 +30,11 @@
 </body>
 <script>
     
-    function result(){
-        document.getElementById("result").value = parseInt(document.getElementById("numberN").value)+parseInt(document.getElementById("numberM").value);;
-       
-        
-
+    function add(){
+        document.getElementById("result").value = parseInt(document.getElementById("numberN").value) + parseInt(document.getElementById("numberM").value);;
+    }
+    function subtract(){
+        document.getElementById("result").value = parseInt(document.getElementById("numberN").value) - parseInt(document.getElementById("numberM").value);;
     }
 
     
