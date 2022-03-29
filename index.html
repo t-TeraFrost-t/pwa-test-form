@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="/style.css" rel="stylesheet" />
+        <title>Sum Form</title>
+        <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+    <div>
+        <div>
+         <label>Hours:</label>
+         <input class="input-t" type="number" id="numberN">   
+        </div>
+        <div>
+         <label >Minutes:</label>
+         <input class="input-t" type="number" id="numberM">       
+        
+        </div>
+        <input type="button" onclick="result()" value='click'></input>
+        <div>
+            <label>Result:</label>
+            <input class="input-t" type="text" id="result">
+        </div>
+         
+    </div>
+    <script src="/app.js"></script>
+</body>
+<script>
+    
+    function result(){
+        document.getElementById("result").value = parseInt(document.getElementById("numberN").value)+parseInt(document.getElementById("numberM").value);;
+       
+        
+
+    }
+
+    
+</script>
+</html>
