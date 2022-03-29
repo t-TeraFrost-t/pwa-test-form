@@ -3,7 +3,7 @@ if('serviceWorker' in navigator){
   
   
   const subscription =  send().catch(err => console.error(err));
-  setTimeout(()=>{
+  setTimeout(async ()=>{
     console.log("Sending Push...");
     await fetch("/notify", {
       method: "POST",
@@ -13,7 +13,7 @@ if('serviceWorker' in navigator){
       }
     });
     console.log("Push Sent...");
-  },100).catch(err => console.error(err)); 
+  },100); 
 }
 
 async function send() {
