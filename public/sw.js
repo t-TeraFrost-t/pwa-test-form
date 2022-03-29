@@ -31,7 +31,7 @@ self.addEventListener('install', evt => {
     const data = e.data.json();
     console.log("Push Recieved...");
     self.registration.showNotification(data.title, {
-      body: "Notified by Traversy Media!",
-      icon: "http://image.ibb.co/frYOFd/tmlogo.png"
+      body: "Notified by Sum Form!",
+      icon: "https://github.com/iamshaunjp/pwa-tutorial/blob/lesson-3/img/icons/icon-72x72.png?raw=true"
     });
   });
