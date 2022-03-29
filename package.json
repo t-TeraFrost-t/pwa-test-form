@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.2",
     "express": "^4.17.3",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "web-push": "^3.4.5"
   }
 }
