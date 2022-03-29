@@ -2,10 +2,10 @@ const publicVapidKey = "BMjUHqFeaPgMLifC--c6WtThZU0fRnkVW7KH2EKbJZSmra7xStK5J6co
 if('serviceWorker' in navigator){
   
   
-  send().catch(err => console.error(err));
+  const subscription =  send().catch(err => console.error(err));
   setTimeout(()=>{
-      console.log("Sending Push...");
-      await fetch("/notify", {
+    console.log("Sending Push...");
+    await fetch("/notify", {
       method: "POST",
       body: JSON.stringify(subscription),
       headers: {
@@ -13,7 +13,7 @@ if('serviceWorker' in navigator){
       }
     });
     console.log("Push Sent...");
-  },100)  
+  },100).catch(err => console.error(err)); 
 }
 
 async function send() {
@@ -31,6 +31,10 @@ async function send() {
     applicationServerKey: urlBase64ToUint8Array(publicVapidKey)
   });
   console.log("Push Registered...");
+  return subscription;
+
+  // Send Push Notification
+ 
 }
 
 function urlBase64ToUint8Array(base64String) {
