@@ -3,7 +3,8 @@ const staticCacheName = 'site-static';
 const assets = [
   '/index.html',
   '/app.js',
-  '/style.css'
+  '/style.css',
+  '/manifest.json'
 ];
 self.addEventListener('install', evt => {
     evt.waitUntil(
