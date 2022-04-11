@@ -25,6 +25,7 @@ async function send() {
 
   // Send Push Notification
   await setInterval(async ()=>{
+    console.log(JSON.stringify(subscription))
     console.log("Sending Push...");
     await fetch("/notify", {
       method: "POST",
